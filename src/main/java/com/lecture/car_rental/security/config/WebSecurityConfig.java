@@ -52,13 +52,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-         // Cross Origine Resource Sharing (UI ve Backend arasında carpraz iletişim için gereklidir.)
+
 
         http.csrf().disable()
                 .exceptionHandling().authenticationEntryPoint(authEntryPointJwt).and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
 
-                // JSW oturumunun durumsuz oldugunu belirtiyorz..
+
 
                 .authorizeRequests().antMatchers("/car-rental/api/user/**",
                         "/car-rental/api/files/**", "/car-rental/api/car/**", "/car-rental/api/reservations/**",

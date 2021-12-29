@@ -18,7 +18,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Override
     //TODO: add transactional!
     @Transactional
-    //Kayıt olan kullanıcının email'ini kontrol et. Daha onceden kullanılmış ise hata dondur.
+
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         User user = userRepository.findByEmail(email)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));

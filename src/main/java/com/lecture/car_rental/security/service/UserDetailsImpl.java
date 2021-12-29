@@ -31,7 +31,7 @@ public class UserDetailsImpl implements UserDetails {
     private Collection<? extends GrantedAuthority> authorities;
 
 
-    // login olan kisinin Rollerinin elde edilmesi
+
 
     public static UserDetailsImpl build(User user) {
         List<GrantedAuthority> authorities = user.getRole().stream()

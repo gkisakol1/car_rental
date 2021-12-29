@@ -45,7 +45,6 @@ public class ReservationService {
     public List<ReservationDTO> findAllByUserId(Long userId) throws ResourceNotFoundException {
         return reservationRepository.findReservationsByUserId(userId);
     }
-
     public void addReservation(Reservation reservation, Long userId, Car carId) throws BadRequestException {
         boolean checkStatus = carAvailability(carId.getId(), reservation.getPickUpTime(), reservation.getDropOfTime());
 

@@ -23,12 +23,12 @@ public class JwtUtils {
 
     public String generateJwtToken(Authentication authentication) {
 
-        //Kimlik denetiminin yapılmasi -->  Authentication authentication
+
 
 
         UserDetailsImpl userPrincipal = (UserDetailsImpl) authentication.getPrincipal();
 
-        //Kimlik denetimi yapılan kisinin bilgilerinin Service katmanından alinmasi
+
 
         return Jwts.builder()
                 .setSubject("" + (userPrincipal.getId()))

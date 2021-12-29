@@ -5,14 +5,14 @@ server:
     include-message: always
   port: 8080
   servlet:
-    context-path: /car-rental/api
+    context-path: 
 
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: 
-    username: postgres
-    url: jdbc:postgresql://localhost:5432/lecture
+    password:
+    username:
+    url:
   jpa:
     hibernate:
       ddl-auto: update
@@ -31,7 +31,7 @@ spring:
 
 backendapi:
   app:
-    jwtSecret: carRentalSecretKey
-    jwtExpirationMs: 86400000
+    jwtSecret:
+    jwtExpirationMs:
 
 

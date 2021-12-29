@@ -26,40 +26,6 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
 
 
-/*
-
-
-
-
-   JWT
-
-
-
-  HEADER    {  "typ" : "JWT",
-              "allg" : "HS256"}
-
-  PAYLOAD   {  "sub"  : "nfdjndjg",
-               "name" : "bjhdsfjd.com",
-               "iar"  :"vdr"}
-
-  SIGNATURE    {  HMACSHıyfıyhfıyfıyfıyofıyfyu258 }
-
-
-
-
-
-          Client                    Server
-
-              http  Post
-
-
-
-
-
-
- */
-
-
 
 
 

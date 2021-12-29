@@ -37,13 +37,11 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
         try {
-            // Kisiye gore JWT olsuturulmasi ve Security Context'in guncellenmesi.
+
             String jwt = parseJwt(request);
             if (jwt != null && jwtUtils.validateJwtToken(jwt)) {
 
-                // Request içerisimdeki Header'a git ve Authorization kısmındaki token ayıkla..
 
-                // Token'ı gecerle
 
                 Long id = jwtUtils.getIdFromJwtToken(jwt);
                 request.setAttribute("id", id);
@@ -54,7 +52,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                         userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 
-                // Kimlik denetim bilgilerini tutan Security Context'in güncellenmesi
+
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
