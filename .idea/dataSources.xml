@@ -8,5 +8,12 @@
       <jdbc-url>jdbc:postgresql://localhost:5432/lecture</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="herokudb" uuid="b259c6ce-fa73-43fa-b8d1-e86581e7007b">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://ec2-34-243-180-8.eu-west-1.compute.amazonaws.com:5432/ddh3l7l3hh330k</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

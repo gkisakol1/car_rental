@@ -10,7 +10,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    password: 188846
+    password: 
     username: postgres
     url: jdbc:postgresql://localhost:5432/lecture
   jpa:
